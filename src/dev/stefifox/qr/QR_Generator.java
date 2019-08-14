@@ -32,7 +32,7 @@ public class QR_Generator {
 	        }
 	 
 	        try {
-	            ImageIO.write(image, "jpg", new File(Main.Default_Folder + "temp\\Temp.jpg")); // save QR image to disk
+	            ImageIO.write(image, "png", new File(Main.Default_Folder + "temp\\Temp.png")); // save QR image to disk
 	        } catch (IOException e) {
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();
