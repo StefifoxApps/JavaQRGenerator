@@ -10,7 +10,6 @@ public class SaveSettings {
 	
 	private static int StartWitdh;
 	private static int StartHeight;
-	private static String User;
 	
 	private static FileOutputStream Output1;
 	public static PrintStream Print;
@@ -20,7 +19,6 @@ public class SaveSettings {
 		StartWitdh = Main.Width;
 		StartHeight = Main.Height;
 
-			
 		//Verify if the file existing		
 		if(!new File(Main.Default_Folder + "settings.set").exists()){
 			New();
@@ -68,8 +66,7 @@ public class SaveSettings {
 		System.out.println("New width: " +  StartWitdh);
 		Print.println(StartHeight);
 		System.out.println("New height: " +  StartHeight);
-		Print.println(User);
-			
+
 		try {
 			Output1.close();
 		} catch (IOException e) {

@@ -9,7 +9,7 @@ public class Main {
 	public static int Height = 500; 
 	public static int Height_Qr = 256; //Default QR Height
 	public static String Title = "QR Generator";
-	public static String Text_Qr = null;
+	public static String Text_Qr = "Menomale che silvio c'è";
 	
 	public static String Default_Folder = ".\\Qr_Generator\\";
 	
@@ -33,7 +33,7 @@ public class Main {
 		}
 		
 		new Frame(Width, Height, Title);
-		
+		new QR_Generator(Text_Qr, Width_Qr, Height_Qr);
 	}
 
 }

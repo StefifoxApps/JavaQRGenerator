@@ -30,7 +30,8 @@ public class LoadSettings {
 			StartWitdh = Integer.parseInt(BufferRead.readLine());
 			System.out.println("Witdh: " + StartWitdh);
 			StartHeight = Integer.parseInt(BufferRead.readLine());
-			System.out.println("Height: " + StartHeight);;
+			System.out.println("Height: " + StartHeight);
+			
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -51,7 +52,7 @@ public class LoadSettings {
 		
 		Main.Width = StartWitdh;
 		Main.Height = StartHeight;
-		
+
 	}
 	
 }
