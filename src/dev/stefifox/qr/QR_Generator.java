@@ -17,8 +17,15 @@ public class QR_Generator {
 	private QRCodeWriter writer;
 	private BufferedImage image;
 	private ImageIcon prewiew_im;
+	
+	public static int number = 0; 
 
-	public QR_Generator(String Text, int width, int  height) {
+	public QR_Generator() {
+	    
+		
+	}
+	
+	public void Generator(String Text, int width, int  height) {
 	    
 		writer = new QRCodeWriter();
 	    
@@ -34,7 +41,9 @@ public class QR_Generator {
 	        }
 	 
 	        try {
-	            ImageIO.write(image, "png", new File(Main.Default_Folder + "temp\\Temp.png")); // save QR image to disk
+	            ImageIO.write(image, "png", new File(Main.Default_Folder + "save\\Qr" + number +  ".png")); // save QR image to disk
+	            number++;
+	            new SaveSettings().N_Update();
 	        } catch (IOException e) {
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();

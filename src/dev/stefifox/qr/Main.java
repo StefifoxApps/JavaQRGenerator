@@ -25,9 +25,6 @@ public class Main {
 			//Generate Default Folder
 			@SuppressWarnings("unused")
 			boolean s0 = (new File(Default_Folder)).mkdir();
-			//Generate QR Temp Folder
-			@SuppressWarnings("unused")
-			boolean s1 = (new File(Default_Folder + "temp")).mkdir();
 			//Generate QR Folder
 			@SuppressWarnings("unused")
 			boolean s2 = (new File(Default_Folder + "save")).mkdir();

@@ -10,6 +10,7 @@ public class SaveSettings {
 	
 	private static int StartWitdh;
 	private static int StartHeight;
+	private static int num;
 	
 	private static FileOutputStream Output1;
 	public static PrintStream Print;
@@ -18,6 +19,7 @@ public class SaveSettings {
 			
 		StartWitdh = Main.Width;
 		StartHeight = Main.Height;
+		num = QR_Generator.number;
 
 		//Verify if the file existing		
 		if(!new File(Main.Default_Folder + "settings.set").exists()){
@@ -41,6 +43,7 @@ public class SaveSettings {
 			
 		Print.println(StartWitdh);
 		Print.println(StartHeight);
+		Print.println(num);
 			
 		try {
 			Output1.close();
@@ -72,6 +75,30 @@ public class SaveSettings {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void N_Update() {
+		
+		
+		try{
+			Output1 = new FileOutputStream(Main.Default_Folder + "settings.set", false); //rewrite settings file
+			Print = new PrintStream(Output1);
+		}
+		catch(IOException e){
+			System.out.println("Erros: "+ e);
+			System.exit(1);
+		}
+			
+		Print.println(StartWitdh);
+		Print.println(StartHeight);
+		Print.println(num);
+
+		try {
+			Output1.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 	}
 }
 	

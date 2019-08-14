@@ -13,6 +13,7 @@ public class LoadSettings {
 	
 	private static int StartWitdh;
 	private static int StartHeight;
+	private static int num;
 	
 	public LoadSettings() {
 		
@@ -31,6 +32,8 @@ public class LoadSettings {
 			System.out.println("Witdh: " + StartWitdh);
 			StartHeight = Integer.parseInt(BufferRead.readLine());
 			System.out.println("Height: " + StartHeight);
+			num = Integer.parseInt(BufferRead.readLine());
+			
 			
 		}catch (IOException e) {
 			e.printStackTrace();
@@ -52,6 +55,7 @@ public class LoadSettings {
 		
 		Main.Width = StartWitdh;
 		Main.Height = StartHeight;
+		QR_Generator.number = num;
 
 	}
 	
