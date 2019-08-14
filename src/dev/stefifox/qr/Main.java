@@ -4,12 +4,14 @@ import java.io.File;
 
 public class Main {
 	
-	public static int Width = 1000;
+	public static int Width = 700;
 	public static int Width_Qr = 256; //Default QR Width
 	public static int Height = 500; 
 	public static int Height_Qr = 256; //Default QR Height
 	public static String Title = "QR Generator";
 	public static String Text_Qr = "null";
+	
+	public static String Version = "0.1";
 	
 	public static String Default_Folder = ".\\Qr_Generator\\";
 	
@@ -17,6 +19,7 @@ public class Main {
 	
 		if(new File(Default_Folder + "Settings.set").exists()) {
 			System.out.println("Settings file [settings.set] foudn");
+			//Load Settings
 			new LoadSettings();
 		}else {
 			//Generate Default Folder
@@ -33,7 +36,7 @@ public class Main {
 		}
 		
 		new Frame(Width, Height, Title);
-		new QR_Generator(Text_Qr, Width_Qr, Height_Qr);
+		
 	}
 
 }
