@@ -1,2 +1,3 @@
 # QRCodeGenerator
-## Using Java and XZing library
+## Using Java and zxing library
+
