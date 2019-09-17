@@ -13,14 +13,14 @@ public class Main {
 	
 	public static String Version = "0.1";
 	
-	public static String Default_Folder = ".\\Qr_Generator\\";
+	public static String Default_Folder = ".\\Qr_Generator\\"; //Default folder
 	
 	public static void main(String[] args) {
 	
 		if(new File(Default_Folder + "Settings.set").exists()) {
 			System.out.println("Settings file [settings.set] foudn");
 			//Load Settings
-			new LoadSettings();
+			new LoadSettings(); //Calling class for Loading all settings
 		}else {
 			//Generate Default Folder
 			@SuppressWarnings("unused")
@@ -29,10 +29,10 @@ public class Main {
 			@SuppressWarnings("unused")
 			boolean s2 = (new File(Default_Folder + "save")).mkdir();
 			//Generate settings
-			new SaveSettings();
+			new SaveSettings(); //Calling class for Saving all settings 
 		}
 		
-		new Frame(Width, Height, Title);
+		new Frame(Width, Height, Title); //Calling class for JFrame generation
 		
 	}
 

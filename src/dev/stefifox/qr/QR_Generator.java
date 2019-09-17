@@ -19,11 +19,6 @@ public class QR_Generator {
 	private ImageIcon prewiew_im;
 	
 	public static int number = 0; 
-
-	public QR_Generator() {
-	    
-		
-	}
 	
 	public void Generator(String Text, int width, int  height) {
 	    
@@ -43,7 +38,7 @@ public class QR_Generator {
 	        try {
 	            ImageIO.write(image, "png", new File(Main.Default_Folder + "save\\Qr" + number +  ".png")); // save QR image to disk
 	            number++;
-	            new SaveSettings().N_Update();
+	            new SaveSettings().N_Update(); //Adding 1 to counter
 	        } catch (IOException e) {
 	            // TODO Auto-generated catch block
 	            e.printStackTrace();
@@ -76,7 +71,7 @@ public class QR_Generator {
 	        e.printStackTrace();
 	    } 
 	    
-	   prewiew_im = new ImageIcon(image);
+	   prewiew_im = new ImageIcon(image); //Showing preview
 	    		
 	   Frame.preview.setIcon(prewiew_im);
 	    		
