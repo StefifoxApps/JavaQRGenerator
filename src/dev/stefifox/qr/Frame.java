@@ -1,4 +1,4 @@
-package dev.stefifox.qr;
+	package dev.stefifox.qr;
 
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;

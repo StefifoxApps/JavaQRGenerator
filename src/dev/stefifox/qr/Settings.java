@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -47,7 +48,7 @@ public class Settings {
 		Warning = new JLabel("There are unsaved modify");
 			
 		dimension = new Dimension(700, 500);
-			
+		
 		Settings_Frame.setSize(dimension);
 		Settings_Frame.setResizable(false);
 		Settings_Frame.setVisible(true);
@@ -63,7 +64,7 @@ public class Settings {
 		Settings_Panel.add(Height_info);
 		Settings_Panel.add(Width_Sett);
 		Settings_Panel.add(Height_Sett);
-			
+
 		//Width and Height
 		Layout.putConstraint(SpringLayout.WEST, Width_Info, 15, SpringLayout.WEST, Settings_Panel);
 		Layout.putConstraint(SpringLayout.EAST, Width_Info, -600, SpringLayout.EAST, Settings_Panel);
