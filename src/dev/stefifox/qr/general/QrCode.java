@@ -1,7 +1,7 @@
 /**
  * @author Stefano - Stefifox
  * This class is a General version for QR_Generator Class
- * Version 1.0
+ * Version 1.1
  * Library: zxing
  * License by: Google LLC.
  * License: Apache 2.0
@@ -13,11 +13,12 @@
 package dev.stefifox.qr.general;
 
 import java.awt.image.BufferedImage;
+import com.google.zxing.qrcode.QRCodeWriter;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.QRCodeWriter;
+
 
 public class QrCode {
 
@@ -31,7 +32,7 @@ public class QrCode {
 	private QRCodeWriter writer;
 	
 	
-	public QrCode(String text, int width, int height, int foreground, int backgroud) { //This method generate a Qr Code Object
+	public QrCode(String text, int width, int height, int foreground, int backgroud) { //This method generate a QR Code Object
 		
 		this.text = text;
 		this.width = width;
@@ -40,6 +41,39 @@ public class QrCode {
 		this.foreground = foreground;
 		this.background = backgroud;
 		
+	}
+	
+	public QrCode(QrCode qr) { //This method copy a QR code
+
+		this.text = qr.getText();
+		this.width = qr.getWidth();
+		this.height = qr.getHeight();
+		
+		this.foreground = qr.getForeground();
+		this.background = qr.getForeground();
+		
+	}
+	
+	public String toString() {
+		
+		return "Text: " + this.text + "\nWidth: " + this.width + "\nHeight" + this.height + "\nForeground: #" + this.foreground + "\nBackground: #" + this.background;
+		
+	}
+	
+	public String getText() {
+		return this.text;
+	}
+	public int getWidth() {
+		return this.width;
+	}
+	public int getHeight() {
+		return this.height;
+	}
+	public int getForeground() {
+		return this.foreground;
+	}
+	public int getBackgriund() {
+		return this.background;
 	}
 	
 	public BufferedImage generate() {
@@ -60,5 +94,5 @@ public class QrCode {
 		
 		return image;
 	}
-
+	
 }
