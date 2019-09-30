@@ -54,6 +54,7 @@ public class QrCode {
 		
 	}
 	
+	@Override
 	public String toString() {
 		
 		return "Text: " + this.text + "\nWidth: " + this.width + "\nHeight" + this.height + "\nForeground: #" + this.foreground + "\nBackground: #" + this.background;
@@ -72,7 +73,7 @@ public class QrCode {
 	public int getForeground() {
 		return this.foreground;
 	}
-	public int getBackgriund() {
+	public int getBackground() {
 		return this.background;
 	}
 	
