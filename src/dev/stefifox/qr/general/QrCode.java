@@ -1,3 +1,12 @@
+package dev.stefifox.qr.general;
+
+import java.awt.image.BufferedImage;
+import com.google.zxing.qrcode.QRCodeWriter;
+
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
+
 /**
  * This class is a General version for QR_Generator Class
  * 
@@ -9,19 +18,8 @@
  * zxing library is proprieties of Google LLC. under Apache license 2.0
  * 
  * @author Stefano - Stefifox
- * @Version 2.0
+ * @version 2.0
  */
-
-package dev.stefifox.qr.general;
-
-import java.awt.image.BufferedImage;
-import com.google.zxing.qrcode.QRCodeWriter;
-
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitMatrix;
-
-
 public class QrCode {
 
 	private static BufferedImage image;
@@ -34,7 +32,7 @@ public class QrCode {
 	 * @param height A QrCode Height
 	 * @param foreground A QrCode foreground
 	 * @param background A QrCode background
-	 * @return BufferedImage image
+	 * @return BufferedImage image 
 	 */
 	
 	public static BufferedImage generate(String text, int width, int height, int foreground, int background) {
