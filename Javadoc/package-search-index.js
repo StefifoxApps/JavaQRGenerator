@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"dev.stefifox.qr"},{"l":"dev.stefifox.qr.general"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"dev.stefifox.nogui"},{"l":"dev.stefifox.qr"},{"l":"dev.stefifox.qr.general"}]

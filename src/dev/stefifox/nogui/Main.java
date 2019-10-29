@@ -24,6 +24,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		
 		do{
