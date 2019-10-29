@@ -46,8 +46,11 @@ public class Main {
 					image = QrCode.generateBalck(text, width, height);
 			}
 			
-			new Output(image);
-			
+			try {
+				new Output(image);
+			}catch(Exception e) {
+				System.out.println("Can not be generated QrCode");
+			}
 		}while(select != 0);
 		
 		System.out.println("Goodbye");
