@@ -7,7 +7,7 @@ import dev.stefifox.qr.general.*;
 
 /**
  * This version are been made for no-gui OS; can be used for generate QRCODES only use terminal 
- * @version 1.0
+ * @version 1.0.1
  * @author Stefifox
  * @category Image coding
  */
@@ -35,7 +35,7 @@ public class Main {
 					System.out.print("Text: ");
 					text = input.next();
 					image = QrCode.generate(text);
-				break;
+					break;
 				case 2:
 					System.out.print("Text: ");
 					text = input.next();
@@ -43,13 +43,16 @@ public class Main {
 					width = input.nextInt();
 					System.out.print("Height: ");
 					height = input.nextInt();
-					image = QrCode.generateBalck(text, width, height);
+					image = QrCode.generateWhite(text, width, height);
+					break;
 			}
 			
-			try {
-				new Output(image);
-			}catch(Exception e) {
-				System.out.println("Can not be generated QrCode");
+			if(select > 0) {
+				try {
+					new Output(image);
+				}catch(Exception e) {
+					System.out.println("Can not be generated QrCode");
+				}
 			}
 		}while(select != 0);
 		
