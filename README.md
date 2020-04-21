@@ -3,7 +3,7 @@
 
 ## Javadoc
 
-[Visit Javadoc of this project](https://stefifox.github.io/JavaQRGenerator/Javadoc/index.html)
+[Visit Javadoc of this project](https://stefifoxapps.github.io/JavaQRGenerator/Javadoc/index.html)
 
 ### What is Javadoc?
 
